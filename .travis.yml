@@ -1,5 +1,16 @@
 language: java
+
+sudo: required
+
+services:
+- docker
+
 jdk:
-  - oraclejdk8
+- oraclejdk8
+
+before_install:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
 script:
-  - ./gradlew jib
+- ./gradlew jib
+
