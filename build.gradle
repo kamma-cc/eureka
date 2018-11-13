@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.4.RELEASE'
+        springBootVersion = '2.0.6.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    id 'com.google.cloud.tools.jib' version '0.9.9'
+    id 'com.google.cloud.tools.jib' version '0.10.0'
 }
 
 
@@ -29,7 +29,7 @@ repositories {
 
 
 ext {
-    springCloudVersion = 'Finchley.SR1'
+    springCloudVersion = 'Finchley.SR2'
 }
 
 dependencies {
