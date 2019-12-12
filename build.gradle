@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.6.RELEASE'
+        springBootVersion = '2.2.1.RELEASE'
     }
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -11,7 +11,7 @@ buildscript {
 }
 
 plugins {
-    id 'com.google.cloud.tools.jib' version '0.10.0'
+    id 'com.google.cloud.tools.jib' version '1.8.0'
 }
 
 
@@ -21,15 +21,15 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'cc.kamma.springcloud'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
-    mavenCentral()
+    jcenter()
 }
 
 
 ext {
-    springCloudVersion = 'Finchley.SR2'
+    springCloudVersion = 'Hoxton.RELEASE'
 }
 
 dependencies {
